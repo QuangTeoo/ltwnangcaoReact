@@ -7,12 +7,13 @@ import Login from './components/Login';
 function App() {
   return (
     <div className="App">
-      <Hello />
+      {/* <Hello />
       <HelloPerson name="Quang Teo"  />
       <Header />
       <HelloQTeo />
       <Car/>
-      <Login />
+      <Login /> */}
+      Xin chào
     </div>
   );
 }
