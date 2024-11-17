@@ -1,14 +1,36 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Login from "./components/Login";
+import ProductList from "./components/ListProduct";
+import ProductDetail from "./components/ProductDetail";
+import Login from "./pages/login";
+import ListAllProduct from "./components/ListAllProduct";
+import Profile from "./components/Profile";
 export const route = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{
-      path: "/login",
-      element:<Login />
-    }],
+    children: [
+      {
+        path: "/",
+        element: <ListAllProduct />,
+      },
+      {
+        path: "category/:id",
+        element: <ProductList />,
+      },
+      {
+        path: "product/detail/:masp",
+        element: <ProductDetail />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      }
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/*",
